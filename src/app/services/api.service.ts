@@ -20,7 +20,7 @@ export class ApiService {
 
   //Get a pet by its id
   getPetById(id:number) : Observable<Pet>{
-    let pet = this.client.get<Pet>(environment.apiUrl + "Pet/GetPetById/" + id);
+    let pet = this.client.get<Pet>(environment.apiUrl + "Pet/GetPetById?id=" + id);
 
     return pet;
   }
