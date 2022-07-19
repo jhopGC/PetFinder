@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Pet } from '../interfaces/pet';
@@ -20,7 +21,7 @@ export class ApiService {
 
   //Get a pet by its id
   getPetById(id:number) : Observable<Pet>{
-    let pet = this.client.get<Pet>(environment.apiUrl + "Pet/GetPetById/" + id);
+    let pet = this.client.get<Pet>(environment.apiUrl + "Pet/GetPetById?id=" + id);
 
     return pet;
   }

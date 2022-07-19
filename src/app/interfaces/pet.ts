@@ -5,4 +5,5 @@ export interface Pet {
     cost:number;
     isAdopted:boolean;
     imageName:string;
+    date: Date
 }

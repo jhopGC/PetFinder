@@ -16,7 +16,7 @@
                     <div class="card-body">
                       <h5 class="card-title">{{pet.name}}</h5>
                       <p class="card-text">{{pet.breed}}</p>
-                      <a class="btn btn-primary">Details</a>
+                      <a [routerLink]="['/petDetails', pet.petId]" class="btn btn-primary">Details</a>
                     </div>
                   </div>
             </div>
